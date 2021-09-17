@@ -1,12 +1,15 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-    <title>Resume of Francois Smit</title>
+    <title>Email Sending</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="EmailSending.css">
 </head>
 
 <body>
+    
+    <div>Testing .html extension</div>
 
     <form class="input-form" action="contactForm.php" method="post">
         <div class="input-row">
@@ -14,14 +17,14 @@
             <div style="width: 50%;">
                 <div class="input-field-row">
                     <div class="flex-y-center" style="width: 75px;">Name:</div>
-                    <input class="flex-child-expand" type="text" id="name" name="name" placeholder="Full Name..." required>
+                    <input class="flex-child-expand" type="text" name="name" placeholder="Full Name..." required>
                 </div>
             </div>
 
             <div style="width: 50%;">
                 <div class="input-field-row">
                     <div class="flex-y-center" style="width: 75px;">Email:</div>
-                    <input class="flex-child-expand" type="email" id="email" name="email" placeholder="Email..." required>
+                    <input class="flex-child-expand" type="email" name="email" placeholder="Email..." required>
                 </div>
             </div>
 
@@ -32,14 +35,14 @@
             <div style="width: 50%;">
                 <div class="input-field-row">
                     <div class="flex-y-center" style="width: 75px;">Subject:</div>
-                    <input class="flex-child-expand" type="text" id="subject" name="subject"  placeholder="Subject..." required>
+                    <input class="flex-child-expand" type="text" name="subject"  placeholder="Subject..." required>
                 </div>
             </div>
 
             <div style="width: 50%;">
                 <div class="input-field-row">
                     <div class="flex-y-center" style="width: 75px;">Service:</div>
-                    <select class="flex-child-expand" name="service" id="service">
+                    <select class="flex-child-expand" name="service">
                         <option value="landingPage">Landing Page</option>
                         <option value="simpleStaticWebsite">Simple Static Website</option>
                         <option value="staticWensite">Static Website</option>
@@ -51,7 +54,7 @@
         <div>
             <div class="flex-row">
                 <div style="width: 75px;">Message:</div>
-                <textarea class="flex-child-expand" style="resize: none; height: 100px;" id="message" name="message">
+                <textarea class="flex-child-expand" style="resize: none; height: 100px;" name="message">
 
                     </textarea>
             </div>
@@ -62,7 +65,6 @@
         </div>
     </form>
 
-    <!-- <?php include 'contactForm.php';?> -->
 
 </body>
 

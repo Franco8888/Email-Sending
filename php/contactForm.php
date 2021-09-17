@@ -8,11 +8,20 @@ if(isset($_POST['submit'])) {
     $service = $_POST['service'];
 
     $mailTo = "info@sleekwebdesign.org";
-    $headers = "From: ".$mailFrom;
-    $txt = "You have received an e-mail from ".$name.".\n\nService requested: ".$service.".\n\n".$message;
+    $headers = array("From: ".$mailFrom,
+    "Reply-To: replyto@example.com",
+    "X-Mailer: PHP/" . PHP_VERSION
+    );
+    $headers = implode("\r\n", $headers);
+    $message = "You have received an e-mail from ".$name.".\n\nService requested: ".$service.".\n\n".$message;
 
-    mail($mailTo, $subject, $txt, $headers);
-    header("Location: EmailSending.html?mailsend");
+    if( mail($mailTo, $subject, $message, $headers) ) {
+        echo '<p>Your message has been sent!</p>';
+//        header('Location: EmailSending.php?mailsend');
+    } else {
+        echo '<p>Something went wrong, go back and try again!</p>';
+    }
+    
+    
 }
 
-?>
